@@ -5,45 +5,37 @@
 ## Sommaire
 
 1. **Initiation au Git**
-
    - Bases du Versionnage
    - Rôle Clé du Versionnage
 
 2. **Exploration de Git**
-
    - Introduction à Git et Comparaison avec d'Autres Systèmes
    - Fonctions et Commandes Clés de Git
 
 3. **Architecture de Git**
-
    - Gestion des Données par Git
    - Les Statuts Essentiels dans Git
 
 4. **Configuration et Gestion avec Git**
-
    - Réglages d'Identité Utilisateur
    - Options de Configuration de Git
 
 5. **Usage Quotidien de Git**
-
    - Commandes Fondamentales de Git
 
-6. **Gérer les Conflits avec Git**
-
+7. **Gérer les Conflits avec Git**
    - Identification des Conflits
    - Méthodes de Résolution
 
-7. **Diffusion des Changements via Git**
+8. **Diffusion des Changements via Git**
 
-8. **Fusion et Rebasage**
-
+9. **Fusion et Rebasage**
    - Comparaison entre Fusion et Rebasage
 
-9. **Pratiques Recommandées en Git**
+10. **Pratiques Recommandées en Git**
+    - Astuces et Méthodologies
 
-   - Astuces et Méthodologies
-
-10. **Synthèse**
+11. **Synthèse**
 
 ## Initiation au Git
 
@@ -92,6 +84,98 @@ Git permet une personnalisation approfondie grâce à ses multiples niveaux de c
 ### Commandes Fondamentales de Git
 
 Les commandes de base telles que git init, git add, git commit, et git push sont essentielles pour la gestion quotidienne d'un projet. Cette partie fournira des explications détaillées et des exemples pratiques pour chaque commande.
+
+## TP 1: Introduction et Bases de Git
+
+**Objectif :** Se familiariser avec les commandes de base de Git.
+
+**Dépôt utilisé :** Microsoft Visual Studio Code (https://github.com/microsoft/vscode)
+
+**Outils et Scripts :**
+
+1. **Git Command Line Tool**: Assurez-vous que Git est installé sur les machines des étudiants. [Télécharger Git](https://git-scm.com/downloads)
+
+2. **Script pour cloner le dépôt**:
+   ```bash
+   git clone https://github.com/microsoft/vscode.git
+   ```
+
+3. **Commandes pour examiner l'historique des commits**:
+   ```bash
+   git log
+   git log --oneline
+   ```
+
+4. **Script pour créer une nouvelle branche et committer**:
+   ```bash
+   git checkout -b <nom_de_la_branche>
+   # Effectuer des modifications
+   git add .
+   git commit -m "Description des modifications"
+   ```
+
+## TP 2: Bonnes Pratiques de Codage
+
+**Objectif :** Comprendre l'importance des messages de commit clairs et des conventions de nommage.
+
+**Dépôt utilisé :** Ruby on Rails (https://github.com/rails/rails)
+
+**Outils et Scripts :**
+
+1. **Analyse de l'historique des commits**:
+   ```bash
+   git log --pretty=format:"%h - %an, %ar : %s"
+   ```
+
+2. **Outils pour la vérification du code source**:
+   - Utiliser des extensions de l'IDE pour analyser le style du code.
+   - Utiliser RuboCop pour Rails (https://github.com/rubocop/rubocop).
+
+## TP 3: Utilisation Avancée de Git
+
+**Objectif :** Maîtriser les opérations avancées de Git telles que le branching, merging et la résolution de conflits.
+
+**Dépôt utilisé :** React (https://github.com/facebook/react)
+
+**Outils et Scripts :**
+
+1. **Création et fusion de branches**:
+   ```bash
+   git checkout -b <nom_de_la_nouvelle_branche>
+   # Effectuer des modifications
+   git checkout main
+   git merge <nom_de_la_nouvelle_branche>
+   ```
+
+2. **Simulation d'un conflit de merge**:
+   - Les étudiants doivent modifier les mêmes lignes dans deux branches différentes, puis essayer de les fusionner.
+
+3. **Outils graphiques**:
+   - Utiliser des outils comme GitKraken ou Sourcetree pour visualiser les branches.
+
+## TP 4: Revue de Code et Collaboration
+
+**Objectif :** Pratiquer la revue de code et comprendre l'utilisation des pull/merge requests.
+
+**Dépôt utilisé :** TensorFlow (https://github.com/tensorflow/tensorflow)
+
+**Outils et Scripts :**
+
+1. **Outils pour la revue de code**:
+   - Utiliser GitHub pour créer et examiner des pull requests.
+   - Utiliser des outils d'annotation de code dans GitHub pour commenter sur des pull requests.
+
+2. **Script pour créer une pull request**:
+   ```bash
+   git checkout -b <nom_de_la_branche>
+   # Effectuer des modifications
+   git push origin <nom_de_la_branche>
+   # Créer une pull request via l'interface GitHub
+   ```
+
+Ces outils et scripts devraient aider à structurer chaque TP et fournir des directives claires aux étudiants pour les aider à accomplir les tâches requises.
+
+
 
 ## Gérer les Conflits avec Git
 
